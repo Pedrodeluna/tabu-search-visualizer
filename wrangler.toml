@@ -1,0 +1,30 @@
+name = "tabu-search-visualizer"
+compatibility_date = "2025-11-15"
+
+# Enable Node.js compatibility for Pages Functions when needed by Next.js
+compatibility_flags = ["nodejs_compat"]
+
+# Cloudflare Pages: Next.js on Pages uses the Vercel build output
+pages_build_output_dir = ".vercel/output/static"
+
+[build]
+# Builds the Next.js app using the official adapter and outputs into .vercel/output
+command = "npx @cloudflare/next-on-pages@latest"
+
+# Add environment variables if needed by your app
+# [vars]
+# NODE_ENV = "production"
+
+# Example bindings (uncomment and adjust if you use them)
+# [[kv_namespaces]]
+# binding = "MY_KV"
+# id = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+
+# [[r2_buckets]]
+# binding = "MY_BUCKET"
+# bucket_name = "my-bucket"
+
+# [[d1_databases]]
+# binding = "DB"
+# database_name = "my-db"
+# database_id = "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
